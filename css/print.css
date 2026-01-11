@@ -1,0 +1,44 @@
+@media print {
+
+    .sidebar,
+    .topbar,
+    .btn,
+    .d-flex button {
+        display: none !important;
+    }
+
+    .main-content {
+        margin-left: 0 !important;
+    }
+
+    .card {
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+    }
+
+    body {
+        background: white !important;
+    }
+
+    /* Ensure tables print well */
+    table {
+        width: 100% !important;
+        border: 1px solid #000;
+    }
+
+    th,
+    td {
+        border: 1px solid #000 !important;
+        color: #000 !important;
+    }
+
+    /* Show school name on print */
+    .dashboard-container::before {
+        content: "School Management System Report";
+        display: block;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+}

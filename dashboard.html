@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - School Management System</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/print.css" media="print">
+    <!-- FontAwesome for Icons (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <i class="fas fa-graduation-cap fa-2x"></i>
+                <h2>EduManage</h2>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-link active" data-view="home">
+                    <i class="fas fa-home"></i> <span>Dashboard</span>
+                </a>
+                <a href="#" class="nav-link" data-view="students">
+                    <i class="fas fa-user-graduate"></i> <span>Students</span>
+                </a>
+                <a href="#" class="nav-link" data-view="teachers">
+                    <i class="fas fa-chalkboard-teacher"></i> <span>Teachers</span>
+                </a>
+                <a href="#" class="nav-link" data-view="classes">
+                    <i class="fas fa-school"></i> <span>Classes</span>
+                </a>
+                <a href="#" class="nav-link" data-view="attendance">
+                    <i class="fas fa-calendar-check"></i> <span>Attendance</span>
+                </a>
+                <a href="#" class="nav-link" data-view="exams">
+                    <i class="fas fa-file-alt"></i> <span>Exams</span>
+                </a>
+                <a href="#" class="nav-link" data-view="fees">
+                    <i class="fas fa-money-bill-wave"></i> <span>Fees</span>
+                </a>
+                <a href="#" class="nav-link" data-view="notices">
+                    <i class="fas fa-bullhorn"></i> <span>Notices</span>
+                </a>
+                <a href="#" class="nav-link" data-view="settings">
+                    <i class="fas fa-cog"></i> <span>Settings</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <button id="logoutBtn" class="btn btn-danger" style="width: 100%;">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Topbar -->
+            <header class="topbar">
+                <div class="toggle-sidebar" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="user-profile">
+                    <span id="userName">Admin User</span>
+                    <img src="https://ui-avatars.com/api/?name=Admin+User&background=random" alt="User" class="avatar">
+                </div>
+            </header>
+
+            <!-- Dynamic View Container -->
+            <div id="appContainer" class="container">
+                <!-- Views will be injected here by app.js -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/storage.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/auth.js"></script>
+
+    <!-- Module Scripts -->
+    <script src="js/students.js"></script>
+    <script src="js/teachers.js"></script>
+    <script src="js/classes.js"></script>
+    <script src="js/attendance.js"></script>
+    <script src="js/exams.js"></script>
+    <script src="js/fees.js"></script>
+    <script src="js/notices.js"></script>
+    <script src="js/settings.js"></script>
+
+    <!-- Main App Logic -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>
